@@ -5,3 +5,6 @@ echo "- Someone make commit at" + `date +"%d-%m-%YT%T"` >> README.md
 git config --local user.email "vladsudakov5@gmail.com"
 git config --local user.name "fisab"
 git add -A && git commit -m "$(curl -s http://whatthecommit.com/index.txt)"
+
+remote_repo="https://Fisab:${token}@github.com/ci_playing.git"
+git push "${remote_repo}"
